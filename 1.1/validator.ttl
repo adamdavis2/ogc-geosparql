@@ -540,27 +540,27 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S17-geojson-content>
 	a sh:NodeShape ;
-	sh:property <S18-geojson-content-sub-start> ; # the example in the SHACL spec (https://www.w3.org/TR/shacl/#constraints) refers to two property shapes: one for the start and one for the end
+	sh:property <S17-geojson-content-sub-start> ; # the example in the SHACL spec (https://www.w3.org/TR/shacl/#constraints) refers to two property shapes: one for the start and one for the end
 	sh:targetSubjectsOf geo:asGeoJSON ;
 .
 
 <S17-geojson-content-sub-start>
 	a sh:PropertyShape ;
 	sh:path geo:asGeoJSON ;
-	sh:pattern "^\\s*$|^\\s*({)(.*)(})\\s*$" ;  # starts with { ends with }
+	sh:pattern "^\s*$|^\s*({)(.*)(})\s*$" ;  # starts with { ends with }
 	sh:message "The content of an RDF literal with an incoming geo:asGeoJSON relation must conform to a well-formed GeoJSON geometry string, as defined by its official specification."@en ;
 .
 
 <S18-kml-content>
 	a sh:NodeShape ;
-	sh:property <S19-kml-content-sub-start> ; # the example in the SHACL spec (https://www.w3.org/TR/shacl/#constraints) refers to two property shapes: one for the start and one for the end
+	sh:property <S18-kml-content-sub-start> ; # the example in the SHACL spec (https://www.w3.org/TR/shacl/#constraints) refers to two property shapes: one for the start and one for the end
 	sh:targetSubjectsOf geo:asKML ;
 .
 
 <S18-kml-content-sub-start>
 	a sh:PropertyShape ;
 	sh:path geo:asKML ;
-	sh:pattern "^\\s*$|^\\s*(<)(.+)(>)\\s*$" ;  # starts with < ends with >
+	sh:pattern "^\s*$|^\s*(<)(.+)(>)\s*$" ;  # starts with < ends with >
 	sh:message "The content of an RDF literal with an incoming geo:asKML relation must conform to a well-formed KML geometry XML string, as defined by its official specification."@en ;
 .
 
