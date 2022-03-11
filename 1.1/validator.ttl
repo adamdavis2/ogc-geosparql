@@ -547,7 +547,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 <S17-geojson-content-sub-start>
 	a sh:PropertyShape ;
 	sh:path geo:asGeoJSON ;
-	sh:pattern "^\s*$|^\s*({)(.*)(})\s*$" ;  # starts with { ends with }
+	sh:pattern "^\\s*$|^\\s*({)(.*)(})\s*$" ;  # starts with { ends with }
 	sh:message "The content of an RDF literal with an incoming geo:asGeoJSON relation must conform to a well-formed GeoJSON geometry string, as defined by its official specification."@en ;
 .
 
